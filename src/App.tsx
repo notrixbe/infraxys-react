@@ -1,5 +1,16 @@
 import React from 'react';
-import {Button, ListItemText, ListItem, List, ListSubheader, Theme, ListItemIcon, Collapse} from '@material-ui/core';
+import {
+  Button,
+  ListItemText,
+  ListItem,
+  List,
+  ListSubheader,
+  Theme,
+  ListItemIcon,
+  Collapse,
+  CircularProgress,
+  LinearProgress,
+} from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 import InboxIcon from '@material-ui/icons/MoveToInbox';
@@ -10,7 +21,6 @@ import ExpandMore from '@material-ui/icons/ExpandMore';
 import StarBorder from '@material-ui/icons/StarBorder';
 
 import './App.css';
-
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
@@ -34,8 +44,11 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <Button variant="contained">Default</Button>
+      <LinearProgress variant="query" color="primary" />
+
+      <header className="App-header" />
+
+      <div>
         <List
           component="nav"
           aria-labelledby="nested-list-subheader"
@@ -43,7 +56,7 @@ function App() {
             <ListSubheader component="div" id="nested-list-subheader">
               Nested List Items
             </ListSubheader>
-              }
+          }
           className={classes.root}
         >
           <ListItem button>
@@ -76,7 +89,7 @@ function App() {
             </List>
           </Collapse>
         </List>
-      </header>
+      </div>
     </div>
   );
 }
