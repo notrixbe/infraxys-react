@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  Button,
   ListItemText,
   ListItem,
   List,
@@ -8,7 +7,6 @@ import {
   Theme,
   ListItemIcon,
   Collapse,
-  CircularProgress,
   LinearProgress,
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
